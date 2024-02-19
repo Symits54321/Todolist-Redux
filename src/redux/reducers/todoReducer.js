@@ -6,6 +6,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 
 const initialState={
+
     todos:[],
 
     message:[],
@@ -16,6 +17,7 @@ const initialState={
         userId: 1,
     },
 
+
     formDataToUpdate:{
         id:983,
         title: 'foo',
@@ -23,15 +25,15 @@ const initialState={
         userId: 1,
     },
 
+
+
     updateState:false,
-
     id:1,
-
     isLoading: false,
-
     error: null,
-    
     fetchAgain:1,
+
+
 }
 
 

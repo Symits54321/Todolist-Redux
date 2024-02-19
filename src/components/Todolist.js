@@ -11,7 +11,8 @@ import List from "./List";
 
 const Todolist = () => {
 
-  const {isLoading,error,todos,formData,formDataToUpdate,updateState,id,fetchAgain} = useSelector(todoSelector);
+  const {isLoading,error,todos,formData,formDataToUpdate,
+    updateState,id,fetchAgain} = useSelector(todoSelector);
  
   const dispatch = useDispatch();
 
