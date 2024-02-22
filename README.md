@@ -1,6 +1,6 @@
 # To-Do List Redux
 
-Welcome to the React Redux To-Do List application! This project is built using the React framework for the frontend and Redux for state management, offering a seamless user experience for managing to-do items. With the power of React's virtual DOM and Redux's centralized state management, users can perform CRUD (Create, Read, Update, Delete) operations without any page reloading.
+Welcome to the React Redux To-Do List application! This project is built using the React framework for the frontend and Redux for state management, offering a seamless user experience for managing to-do items. With the power of React's virtual DOM and Redux's centralized state management, users can perform CRUD (Create, Read, Update, Delete) operations without any page reloading.(__see "Dummy API Features" at bottom__)
 
 ![Homepage](./screenshoot/homepage.JPG)
 
@@ -14,41 +14,32 @@ Welcome to the React Redux To-Do List application! This project is built using t
 
 ## Steps for Working Todo List
 
-1. **Render the Todo List UI**:
-   - Create a component to represent the Todo List.
-   - Render an input box in the middle of the Todo List along with an "Add" button.
-   - Render each todo item with a checkbox to mark as completed, an "Update" button to edit the todo item, and a "Delete" button to remove the todo item.
 
-2. **Add Todo Functionality**:
-   - Implement a function to handle adding new todo items.
-   - When the user enters a todo item in the input box and clicks the "Add" button, add the todo item to the list of todos.
-   - Update the UI to display the newly added todo item.
 
-3. **Update Todo Functionality**:
-   - Implement a function to handle updating todo items.
-   - When the user clicks the "Update" button next to a todo item, change the "Add" button to "Update".
-   - Populate the input box with the text of the todo item being updated.
-   - Allow the user to edit the todo item text in the input box.
-   - When the user clicks the "Update" button again, update the todo item with the new text and reset the input box and button state.
+1. **Add Todo Functionality**:
+ 
+   - When the user enters a todo item in the input box and clicks the "Add" button, the todo item gets added to the list of todos at top.
+
+  
+2. **Update Todo Functionality**:
+  
+   - When the user clicks the "Update" button next to a todo item,  "Add" button changes to "Update".
+   - The input box gets populated with the text of the todo item being updated.
+   - When the user clicks the "Update" button again, todo item gets updated.
 
 4. **Delete Todo Functionality**:
-   - Implement a function to handle deleting todo items.
-   - When the user clicks the "Delete" button next to a todo item, remove that todo item from the list of todos.
-   - Update the UI to reflect the removal of the todo item.
+   - When the user clicks the "Delete" button next to a todo item,  todo item gets removed from the list of todos.
+
 
 5. **Toggle Completed State**:
-   - Implement a function to handle toggling the completed state of todo items.
-   - When the user clicks the checkbox next to a todo item, toggle the completed state of that item between true and false.
-   - Update the UI to reflect the changes in the completed state.
+  
+   - When the user clicks the checkbox next to a todo item,  the  item's completed state gets toggled between true and false.
 
-6. **Display Todo List**:
-   - Render the list of todo items dynamically based on the data stored in the application state.
-   - Each todo item should display its text, a checkbox to mark as completed, and "Update" and "Delete" buttons to edit and remove the item.
 
-7. **Manage Todo State**:
-   - Use Redux to manage the state of the todo list application.
-   - Store the list of todo items in the Redux store.
-   - Implement Redux actions and reducers to add, update, delete, and toggle the completed state of todo items.
+   ## Management of Todo State**:
+   - Used Redux to manage the state of the todo list application.
+   - Stored the list of todo items in the Redux store.
+   - Implemented Redux actions and reducers to add, update, delete, and toggle the completed state of todo items.
 
 ## Getting Started
 
@@ -68,30 +59,32 @@ The React Redux To-Do List application utilizes the `jsonplaceholder` API for fe
 Contributions are welcome! If you find any issues or have suggestions for improvements, please feel free to open an issue or create a pull request.
 
 # Note 
+Internet connection must be on.
 
-While reloading you get page refreshed because of API unedit feature (see below the dummy feature)
+While reloading you get page refreshed because of API unedit feature (see below the dummy feature).
+
 
 ## Dummy API Features
 
 1. **Fetch and Show Todo Items**:
    - Fetch todo items from the provided API endpoint: [https://jsonplaceholder.typicode.com/todos](https://jsonplaceholder.typicode.com/todos).
-   - Display the fetched todo items in the application UI.
+   - Display the fetched todo items in the application UI.(__Only fetch gives actual data__)
 
 2. **Add a Todo Item**:
    - Implement functionality to add a new todo item.
    - Upon adding a new todo item, make a POST request to the API endpoint mentioned above.
    - Save the added todo item in the React application state.
-   - Note: The POST request is a dummy request and won't actually add the item to the server. However, it will simulate a valid request and return dummy data.
+   - Note: The __POST request is a dummy request and won't actually add the item to the server__. However, it will simulate a valid request and return dummy data.
 
 3. **Update a Todo Item**:
    - Implement functionality to update an existing todo item.
    - When updating a todo item, make a PUT request to the API endpoint mentioned above.
-   - Note: Similar to adding a todo item, the PUT request is a dummy call and won't update the item on the server. It will return dummy data.
+   - Note: Similar to adding a todo item, the __PUT request__ is a __dummy call__ and __won't update the item on the server__. It will return dummy data.
 
 4. **Delete a Todo Item**:
    - Implement functionality to delete a todo item.
    - When deleting a todo item, make a DELETE request to the API endpoint mentioned above.
-   - Note: Like the other operations, the DELETE request is a dummy call and won't actually delete the item from the server. It will return dummy data.
+   - Note: Like the other operations, the __DELETE request__ is a __dummy call__ and __won't actually delete the item from the server__. It will return dummy data.
 
 These features allow for simulating CRUD operations (Create, Read, Update, Delete) with the provided API endpoint, enabling users to interact with the todo list application as if it were connected to a real backend.
 
