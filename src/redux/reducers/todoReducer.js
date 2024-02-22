@@ -12,7 +12,7 @@ const initialState={
     message:[],
 
     formData:{
-        title: 'foo',
+        title: '',
         completed: false,
         userId: 1,
     },
@@ -42,6 +42,7 @@ const initialState={
 
 
 const todoSlice = createSlice({
+    
     name:'todos',
     initialState:initialState,
     reducers:{
@@ -54,15 +55,14 @@ const todoSlice = createSlice({
      
 
         fetchSuccess:(state, action)=>{
-            state.message=action.payload;
+           
             state.isLoading=false;
             console.log("Success :___ "+action.payload);
         },
 
         fetchError:(state, action)=>{
-           state.error = action.payload;
+          
            state.isLoading = false ;
-
            console.log("ERROR :___ "+action.payload);
         },
 

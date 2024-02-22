@@ -195,12 +195,12 @@ const Todolist = () => {
 
   return (
     <div className={style.todolist}>
-      <h3>Todolist</h3>
+      <h3 className={style.todoHead}>Todolist</h3>
 
-      <form onSubmit={!updateState ? addtodos : updatetodos}>
+      <form onSubmit={!updateState ? addtodos : updatetodos} className={style.todoFormContainer}>
 
-        <input className="input" onChange={(e)=>{dispatch(todoActions.updateTitle(e.target.value))}} value={formData.title}/>
-        <button type="submit">{!updateState ? "Add" : "Update"}</button>
+        <input className={style.formInput} onChange={(e)=>{dispatch(todoActions.updateTitle(e.target.value))}} value={formData.title}/>
+        <button className={style.addBtn} type="submit">{!updateState ? "Add" : "Update"}</button>
 
       </form>
 

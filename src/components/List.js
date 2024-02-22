@@ -7,7 +7,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { todoActions,todoSelector } from "../redux/reducers/todoReducer";
 // import fontawesome icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTrash,faPen, faCheck , faSquareXmark
+import { faTrash,faPen, faCheck , faXmark
  } from '@fortawesome/free-solid-svg-icons';
 
 
@@ -171,18 +171,25 @@ const  toggletodos = async (id) => {
 
                             <li  key={index} id={todo.id} className={style.listitem}>  
 
+                              <div className={style.listTextandMark}>
+
+                                {/* Toggle status  */}
+                                <button className={style.liststatus}
+                                onClick={()=> handletoggletodo(todo.id)}
+                                >{todo.completed ? <FontAwesomeIcon icon={faCheck} />
+                                : <FontAwesomeIcon icon={faXmark} />  }</button>
+
                                 <p className={style.listtitle}>{todo.title}</p>
 
+                            </div>
+
                                     <div className={style.listbtncontainer}>
-                                        {/* Toggle status  */}
-                                        <button className={style.liststatus}
-                                        onClick={()=> handletoggletodo(todo.id)}
-                                        >{todo.completed ? <FontAwesomeIcon icon={faCheck} />
-                                         : <FontAwesomeIcon icon={faSquareXmark} />  }</button>
+                                       
                                         {/* Update  */}
                                         <button className={style.listUpdate}
                                         onClick={()=> handleupdate(todo.id,todo.title)}
                                         ><FontAwesomeIcon icon={faPen} /> </button>
+
                                         {/* Delete  */}
                                         <button className={style.listdelete}
                                         onClick={()=> handledelete(todo.id)} >

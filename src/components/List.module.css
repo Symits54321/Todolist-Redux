@@ -1,5 +1,5 @@
 .listcontainer{
-    height: 60vh;
+    height: 70vh;
     width:90%;
     overflow-y: scroll;
     display: flex;
@@ -10,35 +10,34 @@
     border-radius: 5px;
     margin: 5px;
     padding-top: 20px;
+    
+
 }
 
 .listcontainer>ul{
 
-    padding :10px 7vw;
-    width:80%;
+    padding :10px 20px;
+    width:100%;
     height:auto;
    
-    
+      
 }
 
 
 
 .listitem{
 
-    padding-bottom: 13px;
-
-    border-bottom:1px solid ;
-
+    padding: 13px;
+    border-bottom:1px solid rgb(143, 61, 29);
+    width:100%;
     position: relative;
-
-
-    
+  
 }
 
 .listtitle{
     
     width:80%;
-    min-height: 40px;
+    min-height: 30px;
     margin:10px 3px 35px 3px;
 
 }
@@ -46,21 +45,57 @@
 .listbtncontainer{
     display:flex;
     height:30px;
+    width:100px;
     flex-direction: row;
     justify-content: space-evenly;
     position:absolute;
     right:5px;
-    bottom :0px;
+    bottom :3px;
 
 }
 
 .listUpdate, .listdelete, .liststatus{
 
     height:20px;
+    cursor:pointer;
+    border:none;
+    box-shadow: 2px 3px 12px 3px gray;
+
+}
+
+.listUpdate:active, .listdelete:active, .liststatus:active{
+    box-shadow: none;
+}
+
+.listUpdate, .listdelete{
+    color: azure;
+    height:30px;
+    padding: 9px;
+}
+
+.listdelete{
+    background-color: rgb(255, 135, 119);
+}
+
+.listUpdate{
+    background-color: rgb(106, 156, 255);
+}
+
+.liststatus{
+    margin-top: 10px;
+    width:25px;
+    height:25px;
+    border-radius: 50%;
+}
+
+.listTextandMark{
+    display: grid;
+    grid-template-columns: 1fr 7fr;
 
 }
 
 
+/* Scroll bar  */
 
 .listcontainer::-webkit-scrollbar {
     width: 15px;
@@ -68,7 +103,7 @@
   }
    
   .listcontainer::-webkit-scrollbar-track {
-    background: rgb(220, 216, 216);
+    background: rgb(128, 145, 255);
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
     border-radius: 10px solid  rgb(220, 216, 216);
     
@@ -76,13 +111,18 @@
   }
    
   .listcontainer::-webkit-scrollbar-thumb {
-    background: rgb(134, 133, 133);
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+    background: rgb(183, 45, 45);
+   
+    box-shadow: 0 0 6px rgba(255, 10, 10, 0.831);
     border: 2px solid  rgb(220, 216, 216);
     border-radius: 4px;
    
     
     
+  }
+
+  .listcontainer>ul{
+          list-style: none;
   }
 
 

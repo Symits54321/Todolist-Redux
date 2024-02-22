@@ -1,15 +1,63 @@
 *{
     box-sizing: border-box;
+    color:rgb(28, 26, 26);
 }
 
+.todoHead{
+    margin:12px;
+    color: rgb(88, 27, 145);
+    font-size: 2.6em;
+    font-weight: 500;
+    text-shadow: 5px 5px  rgb(25, 118, 210);
+
+}
 
 .todolist{
     width:100%;
     height:100vh;
-    margin: 12px 5px;
+   
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
+    gap:10px;
     align-items: center;
-    background-image: linear-gradient(45deg,blue,lightgreen);
+    background-image: linear-gradient(45deg,rgb(92, 92, 247),rgb(182, 101, 253));
+}
+
+.todoFormContainer{
+
+    display: flex;
+    justify-content: center;
+    border-radius: 6px;
+    box-shadow: 0px 0px 12px 3px lightgoldenrodyellow;
+    gap:0px;
+}
+
+.formInput{
+   padding:10px 0px 10px 12px;
+   min-width:150px;
+   width:65vw;
+   font-size: 1.2em;
+   font-weight: 100;
+   border: none;
+   outline: none;
+   border-radius:6px 0px 0px 6px;
+   background-color: rgb(246, 246, 195);
+   
+
+}
+input:focus{
+    border: none;
+    outline: none;
+}
+
+.addBtn{
+    padding:7px 12px;
+    font-weight: 500;
+    font-size: 1.1em;
+    letter-spacing: 0.05em;
+    border-radius: 0px 6px 6px 0px;
+    border:none;
+    cursor:pointer;
+    background-color: bisque;
 }
